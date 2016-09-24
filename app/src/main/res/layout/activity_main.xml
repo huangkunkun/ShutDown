@@ -10,16 +10,16 @@
     android:layout_height="wrap_content"
     android:text="设置自动关机时间"
     android:textSize="20sp"
-    android:padding="20dp"/>
+    android:padding="10dp"/>
 <TimePicker
     android:id="@+id/tp_show"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:timePickerMode="spinner"
     />
     <LinearLayout
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,20 +40,20 @@
             android:background="@android:color/transparent"/>
     </LinearLayout>
     <Button
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/btn_close"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="关闭定时关机"
         android:background="@android:color/transparent"/>
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="已经设定的时间"
         android:textSize="15sp"/>
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

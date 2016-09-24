@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             calender.set(Calendar.HOUR_OF_DAY, hourGet);
         }
         time = calender.getTimeInMillis();
+        Log.d("time", time + "");
     }
 
     /**
@@ -101,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
         pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0,
                 intent, PendingIntent.FLAG_UPDATE_CURRENT);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-
     }
 
     private void initListener() {
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 在软件进入OnStop态时保存已经设置的数据
+     * 在软件进入onStop态时保存已经设置的数据
      */
     @Override
     protected void onStop() {

@@ -16,7 +16,7 @@ public class AlarmBroadcastReciver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Toast.makeText(context,"关机啦", Toast.LENGTH_SHORT).show();
-        try {
+      /*  try {
             Process process = Runtime.getRuntime().exec("su");
             DataOutputStream out = new DataOutputStream(
                     process.getOutputStream());
@@ -25,7 +25,13 @@ public class AlarmBroadcastReciver extends BroadcastReceiver {
             out.flush();
         } catch (IOException e) {
             e.printStackTrace();
+        } */
+        try {
+            Process process = Runtime.getRuntime().exec(new String[]{"su","-c","reboot -p" });
+            process.waitFor();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-}
+    }
 }
